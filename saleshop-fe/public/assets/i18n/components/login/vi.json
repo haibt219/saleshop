@@ -17,10 +17,10 @@
   },
   "validation": {
     "username": {
-      "required": "Tên đăng nhập là bắt buộc"
+      "required": "Tên đăng nhập là bắt buộc."
     },
     "password": {
-      "required": "Mật khẩu là bắt buộc"
+      "required": "Mật khẩu là bắt buộc."
     }
   }
 }

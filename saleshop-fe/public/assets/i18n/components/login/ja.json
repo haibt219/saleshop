@@ -17,10 +17,10 @@
   },
   "validation": {
     "username": {
-      "required": "ユーザー名は必須です"
+      "required": "ユーザー名は必須です。"
     },
     "password": {
-      "required": "パスワードは必須です"
+      "required": "パスワードは必須です。"
     }
   }
 }
