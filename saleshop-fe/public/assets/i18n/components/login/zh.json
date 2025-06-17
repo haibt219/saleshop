@@ -11,9 +11,9 @@
     "bartender": "调酒师"
   },
   "errors": {
-    "usernameNotFound": "用户名不存在",
-    "incorrectPassword": "密码错误",
-    "roleMismatch": "角色与账户不匹配"
+    "usernameNotFound": "用户名不存在。",
+    "incorrectPassword": "密码错误。",
+    "roleMismatch": "角色与账户不匹配。"
   },
   "validation": {
     "username": {

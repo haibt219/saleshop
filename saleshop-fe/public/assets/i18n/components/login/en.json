@@ -11,16 +11,16 @@
     "bartender": "Bartender"
   },
   "errors": {
-    "usernameNotFound": "Username not found",
-    "incorrectPassword": "Incorrect password",
-    "roleMismatch": "Role does not match the account"
+    "usernameNotFound": "Username not found.",
+    "incorrectPassword": "Incorrect password.",
+    "roleMismatch": "Role does not match the account."
   },
   "validation": {
     "username": {
-      "required": "Username is required"
+      "required": "Username is required."
     },
     "password": {
-      "required": "Password is required"
+      "required": "Password is required."
     }
   }
 }

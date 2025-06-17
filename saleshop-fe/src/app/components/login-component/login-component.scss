@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #d4b896 0%, #c8a882 100%);
-  padding: 20px;
 }
 
 .login-card {
@@ -75,6 +74,10 @@
   }
 }
 
+.red-color {
+  color: red;
+}
+
 @keyframes shake {
 
   0%,
@@ -121,7 +124,6 @@
       }
 
       &.mat-focused {
-
         .mdc-notched-outline__leading,
         .mdc-notched-outline__notch,
         .mdc-notched-outline__trailing {
@@ -156,6 +158,10 @@
     .mdc-floating-label--focused {
       color: #8B4513 !important;
     }
+
+    .mat-mdc-form-field-error-wrapper {
+      padding: 0;
+    }
   }
 }
 
@@ -169,9 +175,7 @@
     justify-content: space-between;
 
     .role-option {
-      flex: 1;
       font-size: 14px;
-      max-width: calc(25% - 15px);
 
       ::ng-deep {
         .mdc-radio {

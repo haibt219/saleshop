@@ -23,10 +23,10 @@
     <!-- Login Form -->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <!-- Username Input -->
-      <mat-label>{{ 'username' | componentTranslate: componentName }}</mat-label>
+      <mat-label>{{ 'username' | componentTranslate: componentName }} <span class="red-color">*</span></mat-label>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>{{ 'username' | componentTranslate: componentName }}</mat-label>
-        <input matInput formControlName="username" type="text" (input)="onInputChange()" (focus)="true"
+        <input #usernameInput matInput formControlName="username" type="text" (input)="onInputChange()" autofocus
           [class.error-input]="loginError">
         <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
           {{ getFieldErrorMessage('username') }}
@@ -34,7 +34,7 @@
       </mat-form-field>
 
       <!-- Password Input -->
-      <mat-label>{{ 'password' | componentTranslate: componentName }}</mat-label>
+      <mat-label>{{ 'password' | componentTranslate: componentName }} <span class="red-color">*</span></mat-label>
       <mat-form-field appearance="outline" class="full-width">
         <mat-label>{{ 'password' | componentTranslate: componentName }}</mat-label>
         <input matInput formControlName="password" type="password" (input)="onInputChange()"

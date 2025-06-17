@@ -11,9 +11,9 @@
     "bartender": "バーテンダー"
   },
   "errors": {
-    "usernameNotFound": "ユーザー名が存在しません",
-    "incorrectPassword": "パスワードが間違っています",
-    "roleMismatch": "役割がアカウントと一致しません"
+    "usernameNotFound": "ユーザー名が存在しません。",
+    "incorrectPassword": "パスワードが間違っています。",
+    "roleMismatch": "役割がアカウントと一致しません。"
   },
   "validation": {
     "username": {

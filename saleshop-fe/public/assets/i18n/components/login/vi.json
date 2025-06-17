@@ -11,9 +11,9 @@
     "bartender": "Pha chế"
   },
   "errors": {
-    "usernameNotFound": "Tên đăng nhập không tồn tại",
-    "incorrectPassword": "Mật khẩu không chính xác",
-    "roleMismatch": "Vai trò không khớp với tài khoản"
+    "usernameNotFound": "Tên đăng nhập không tồn tại.",
+    "incorrectPassword": "Mật khẩu không chính xác.",
+    "roleMismatch": "Vai trò không khớp với tài khoản."
   },
   "validation": {
     "username": {
