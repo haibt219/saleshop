@@ -1,0 +1,26 @@
+{
+  "username": "사용자 이름",
+  "password": "비밀번호",
+  "login": "로그인",
+  "loggingIn": "처리 중...",
+  "success": "{username}님 환영합니다! 로그인 성공.",
+  "roles": {
+    "employee": "직원",
+    "cashier": "캐셔",
+    "admin": "관리자",
+    "bartender": "바텐더"
+  },
+  "errors": {
+    "usernameNotFound": "사용자 이름이 존재하지 않습니다",
+    "incorrectPassword": "비밀번호가 올바르지 않습니다",
+    "roleMismatch": "역할이 계정과 일치하지 않습니다"
+  },
+  "validation": {
+    "username": {
+      "required": "사용자 이름은 필수입니다"
+    },
+    "password": {
+      "required": "비밀번호는 필수입니다"
+    }
+  }
+}

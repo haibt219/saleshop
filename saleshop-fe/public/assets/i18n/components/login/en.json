@@ -1,0 +1,26 @@
+{
+  "username": "Username",
+  "password": "Password",
+  "login": "LOGIN",
+  "loggingIn": "Processing...",
+  "success": "Welcome {username}! Login successful.",
+  "roles": {
+    "employee": "Server",
+    "cashier": "Cashier",
+    "admin": "Admin",
+    "bartender": "Bartender"
+  },
+  "errors": {
+    "usernameNotFound": "Username not found",
+    "incorrectPassword": "Incorrect password",
+    "roleMismatch": "Role does not match the account"
+  },
+  "validation": {
+    "username": {
+      "required": "Username is required"
+    },
+    "password": {
+      "required": "Password is required"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "languages": {
+    "vietnamese": "Tiếng Việt",
+    "english": "English",
+    "japanese": "日本語"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "delete": "Xóa",
+    "edit": "Sửa",
+    "add": "Thêm",
+    "confirm": "Xác nhận",
+    "close": "Đóng"
+  }
+}

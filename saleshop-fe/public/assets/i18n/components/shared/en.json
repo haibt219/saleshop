@@ -1,0 +1,17 @@
+{
+  "languages": {
+    "vietnamese": "Vietnamese",
+    "english": "English",
+    "japanese": "Japanese"
+  },
+  "common": {
+    "loading": "Loading...",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "confirm": "Confirm",
+    "close": "Close"
+  }
+}

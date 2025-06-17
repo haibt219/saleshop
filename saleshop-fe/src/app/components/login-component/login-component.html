@@ -3,73 +3,79 @@
     <!-- Logo Section -->
     <div class="logo-section">
       <div class="logo">
-        <svg
-          width="80"
-          height="80"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="#8B4513"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="coffee-icon">
-          <path d="M10 2v2"/>
-          <path d="M14 2v2"/>
-          <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/>
-          <path d="M6 2v2"/>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#8B4513" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" class="coffee-icon">
+          <path d="M10 2v2" />
+          <path d="M14 2v2" />
+          <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1" />
+          <path d="M6 2v2" />
         </svg>
       </div>
       <h1 class="brand-title">HAIBT<span class="coffee-text">COFFEE</span></h1>
     </div>
 
+    <!-- Error Message Display -->
+    <div *ngIf="loginError" class="error-message">
+      <mat-icon class="error-icon">error</mat-icon>
+      <span>{{ loginError }}</span>
+    </div>
+
     <!-- Login Form -->
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
       <!-- Username Input -->
-      <mat-label>Tên đăng nhập</mat-label>
+      <mat-label>{{ 'username' | componentTranslate: componentName }}</mat-label>
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Tên đăng nhập</mat-label>
-        <input matInput formControlName="username" type="text">
+        <mat-label>{{ 'username' | componentTranslate: componentName }}</mat-label>
+        <input matInput formControlName="username" type="text" (input)="onInputChange()" (focus)="true"
+          [class.error-input]="loginError">
         <mat-error *ngIf="loginForm.get('username')?.hasError('required')">
-          Tên đăng nhập là bắt buộc
+          {{ getFieldErrorMessage('username') }}
         </mat-error>
       </mat-form-field>
 
       <!-- Password Input -->
-      <mat-label>Mật khẩu</mat-label>
+      <mat-label>{{ 'password' | componentTranslate: componentName }}</mat-label>
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Mật khẩu</mat-label>
-        <input matInput formControlName="password" type="password">
+        <mat-label>{{ 'password' | componentTranslate: componentName }}</mat-label>
+        <input matInput formControlName="password" type="password" (input)="onInputChange()"
+          [class.error-input]="loginError">
         <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-          Mật khẩu là bắt buộc
+          {{ getFieldErrorMessage('password') }}
         </mat-error>
       </mat-form-field>
 
       <!-- Role Selection -->
       <div class="role-selection">
-        <mat-radio-group formControlName="role" class="role-group">
-          <mat-radio-button value="employee" class="role-option">
-            Phục vụ
+        <mat-radio-group formControlName="role" class="role-group" (change)="onInputChange()">
+          <mat-radio-button value="employee" class="role-option" [matTooltip]="getRoleText('employee')"
+            matTooltipPosition="above">
+            <span class="role-text">{{ getRoleText('employee') }}</span>
           </mat-radio-button>
-          <mat-radio-button value="cashier" class="role-option">
-            Thu ngân
+          <mat-radio-button value="cashier" class="role-option" [matTooltip]="getRoleText('cashier')"
+            matTooltipPosition="above">
+            <span class="role-text">{{ getRoleText('cashier') }}</span>
           </mat-radio-button>
-          <mat-radio-button value="admin" class="role-option">
-            Admin
+          <mat-radio-button value="admin" class="role-option" [matTooltip]="getRoleText('admin')"
+            matTooltipPosition="above">
+            <span class="role-text">{{ getRoleText('admin') }}</span>
           </mat-radio-button>
-          <mat-radio-button value="manager" class="role-option">
-            Phụ chế
+          <mat-radio-button value="bartender" class="role-option" [matTooltip]="getRoleText('bartender')"
+            matTooltipPosition="above">
+            <span class="role-text">{{ getRoleText('bartender') }}</span>
           </mat-radio-button>
         </mat-radio-group>
       </div>
 
-      <!-- Login Button -->
-      <button
-        mat-raised-button
-        type="submit"
-        class="login-button"
-        [disabled]="!loginForm.valid">
-        ĐĂNG NHẬP
-      </button>
+      <!-- Action Buttons -->
+      <div class="button-group">
+        <button mat-raised-button type="submit" class="login-button" [disabled]="!loginForm.valid || isLoading">
+          <span *ngIf="!isLoading">{{ 'login' | componentTranslate: componentName }}</span>
+          <span *ngIf="isLoading" class="loading-text">
+            <mat-icon class="loading-icon">refresh</mat-icon>
+            {{ 'loggingIn' | componentTranslate: componentName }}
+          </span>
+        </button>
+      </div>
     </form>
   </div>
 </div>

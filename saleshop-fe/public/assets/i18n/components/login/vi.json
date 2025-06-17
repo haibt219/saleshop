@@ -1,0 +1,26 @@
+{
+  "username": "Tên đăng nhập",
+  "password": "Mật khẩu",
+  "login": "ĐĂNG NHẬP",
+  "loggingIn": "Đang xử lý...",
+  "success": "Chào mừng {username}! Đăng nhập thành công.",
+  "roles": {
+    "employee": "Phục vụ",
+    "cashier": "Thu ngân",
+    "admin": "Admin",
+    "bartender": "Pha chế"
+  },
+  "errors": {
+    "usernameNotFound": "Tên đăng nhập không tồn tại",
+    "incorrectPassword": "Mật khẩu không chính xác",
+    "roleMismatch": "Vai trò không khớp với tài khoản"
+  },
+  "validation": {
+    "username": {
+      "required": "Tên đăng nhập là bắt buộc"
+    },
+    "password": {
+      "required": "Mật khẩu là bắt buộc"
+    }
+  }
+}

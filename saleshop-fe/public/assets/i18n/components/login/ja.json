@@ -1,0 +1,26 @@
+{
+  "username": "ユーザー名",
+  "password": "パスワード",
+  "login": "ログイン",
+  "loggingIn": "処理中...",
+  "success": "ようこそ {username} さん！ログイン成功。",
+  "roles": {
+    "employee": "スタッフ",
+    "cashier": "レジ係",
+    "admin": "管理者",
+    "bartender": "バーテンダー"
+  },
+  "errors": {
+    "usernameNotFound": "ユーザー名が存在しません",
+    "incorrectPassword": "パスワードが間違っています",
+    "roleMismatch": "役割がアカウントと一致しません"
+  },
+  "validation": {
+    "username": {
+      "required": "ユーザー名は必須です"
+    },
+    "password": {
+      "required": "パスワードは必須です"
+    }
+  }
+}

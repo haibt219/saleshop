@@ -1,0 +1,17 @@
+{
+  "languages": {
+    "vietnamese": "베트남어",
+    "english": "영어",
+    "japanese": "일본어"
+  },
+  "common": {
+    "loading": "로딩 중...",
+    "cancel": "취소",
+    "save": "저장",
+    "delete": "삭제",
+    "edit": "편집",
+    "add": "추가",
+    "confirm": "확인",
+    "close": "닫기"
+  }
+}
